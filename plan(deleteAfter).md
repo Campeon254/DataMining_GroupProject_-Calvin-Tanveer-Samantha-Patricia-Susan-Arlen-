@@ -1,5 +1,19 @@
-Here's the markdown version of your End-to-End Data Mining Project Plan:
-
+# Project Structure
+DataMining_GroupProject_<GroupMembersName>/  (This is the root of your repository) 
+├── data/ 
+│   ├── raw/ 
+│   ├── transformed/ 
+│   └── final/ 
+├── notebooks/ 
+│   ├── 1_extract_transform.ipynb [cite: 18]
+│   ├── 2_exploratory_analysis.ipynb [cite: 19]
+│   ├── 3_data_mining.ipynb [cite: 20]
+│   └── 4_insights_dashboard.ipynb [cite: 21]
+├── report/ 
+│   └── executive_summary.pdf [cite: 24]
+├── requirements.txt 
+├── .gitignore 
+└── README.md [cite: 27]
 ```markdown
 # End-to-End Data Mining Project Plan
 
