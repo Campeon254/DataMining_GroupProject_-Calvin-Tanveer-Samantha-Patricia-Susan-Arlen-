@@ -2,14 +2,26 @@
 A short project applying a full data pipeline from ETL process to Data Mining to Insights &amp; Storytelling. Enjoy😊
 
 ## Tables of Contents
-1. [Introduction](#introduction)
-2. [Data Understanding](#data-understanding)
-3. [Data Preparation](#data-preparation)
-4. [Data Mining](#data-mining)
-5. [Insights & Storytelling](#insights--storytelling)
-
-## Introduction
+1.[Project Overview](#-project-overview)  
+2.[Dataset](#-dataset) 
+3.[Data Understanding](#-dataset-description)  
+4.[Data Preparation](#-preprocessing-steps)  
+5.[Data Mining (techniques/algorithms applied)](#-data-mining)
+6.[Tools & Libraries](#-tools--libraries)  
+7.[Installation](#-installation)  
+8.[Data Preprocessing](#-data-preprocessing)  
+9.[EDA & Visualizations](#-eda--visualizations)  
+10.[Models](#-models)  
+11.[Results](#-results)  
+12.[Contributors](#-contributors)
+13.[License] (#license)  
+## Project Overview
 This project aims to demonstrate the complete data pipeline process, from extracting and transforming data to mining insights and storytelling. The focus is on applying data warehousing techniques and data mining algorithms to derive meaningful insights from the dataset.
+
+## Dataset
+**Source:** [Kaggle/UCI/API]  
+**Size:** [X rows, Y columns]  
+**Features:**  
 
 ## Data Understanding
 In this section, we will explore the dataset, understand its structure, and identify key attributes that will be useful for our analysis. We will also perform initial data profiling to assess data quality and completeness.
