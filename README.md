@@ -106,13 +106,13 @@ This project analyzes lung cancer patient data to predict survival rates and ide
 ## 3. Data Mining and Modeling
 ### Model Development
 1. **Data Preprocessing**
-   - Split data into training (80%) and testing (20%) sets
-   - Standardized numerical features
-   - Encoded categorical variables
+   - Split data into training (80%) and testing (20%) sets.
+   - Standardized numerical features.
+   - Encoded categorical variables.
 
 2. **Models Implemented**
-   - Logistic Regression
-   - Random Forest Classifier
+   - Logistic Regression.
+   - Random Forest Classifier.
    
 3. **Model Evaluation**
    - Logistic Regression:
@@ -138,24 +138,24 @@ This project analyzes lung cancer patient data to predict survival rates and ide
 ## 4. Interactive Dashboard
 ### Survival Analysis Dashboard
 - Created interactive visualizations for:
-  - Survival rates by demographics
-  - Treatment effectiveness
-  - Risk factor analysis
+  - Survival rates by demographics.
+  - Treatment effectiveness.
+  - Risk factor analysis.
   
 ### Prediction Interface
-- Developed real-time survival prediction tool
-- Included key patient parameters
-- Provided probability-based outcomes
+- Developed real-time survival prediction tool.
+- Included key patient parameters.
+- Provided probability-based outcomes.
 
 [Screenshot: Dashboard interface]
 
 ## Technical Implementation
 ### Tools and Technologies
-- Python 3.x
-- Pandas & NumPy for data manipulation
-- Scikit-learn for machine learning
-- Plotly & Seaborn for visualization
-- Jupyter Notebooks for development
+- Python 3.x.
+- Pandas & NumPy for data manipulation.
+- Scikit-learn for machine learning.
+- Plotly & Seaborn for visualization.
+- Jupyter Notebooks for development.
 
 ### Project Structure
 ```
@@ -181,9 +181,12 @@ project/
 [Your future improvements will go here]
 
 ## Contributors
-- Calvin
-- Tanveer
-- Samantha
-- Patricia
-- Susan
-- Arlen
+- Calvin Gacheru - 670035
+- Tanveer Omar
+- Samantha Masaki
+- Patricia Kiarie
+- Susan 
+- Arlen Ngahu
+
+## License
+This repository is Licensed under the MIT License. See [LICENSE](LICENSE) for details.
