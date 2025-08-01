@@ -22,20 +22,20 @@ This project analyzes lung cancer patient data to predict survival rates and ide
 
 ### Data Quality Assessment
 - Performed comprehensive data quality checks:
-  - Found no missing values in the dataset
-  - Found no duplicate records
+  - Found no missing values in the dataset.
+  - Found no duplicate records.
   - Validated data types for each column:
-    - Converted dates (diagnosis_date, end_treatment_date) to datetime
-    - Verified binary indicators (0/1) for medical conditions
-    - Converted categorical variables to category dtype
-- Generated data quality report showing 100% completeness
+    - Converted dates (diagnosis_date, end_treatment_date) to datetime.
+    - Verified binary indicators (0/1) for medical conditions.
+    - Converted categorical variables to category dtype.
+- Generated data quality report showing 100% completeness.
 
 [Screenshot: Data quality checks]
 
 ### Feature Engineering
 1. **Temporal Feature Creation**
-   - Converted diagnosis_date and end_treatment_date to datetime
-   - Calculated treatment_duration in days: end_treatment_date - diagnosis_date
+   - Converted diagnosis_date and end_treatment_date to datetime.
+   - Calculated treatment_duration in days: end_treatment_date - diagnosis_date.
    - Created time-based features:
      - diagnosis_year: Extract year from diagnosis date.
      - diagnosis_month: 1-12 month encoding.
