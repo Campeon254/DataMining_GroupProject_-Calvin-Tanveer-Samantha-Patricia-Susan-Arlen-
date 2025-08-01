@@ -161,9 +161,9 @@ This project analyzes lung cancer patient data to predict survival rates and ide
 ```
 project/
 ├── data/
-│   ├── raw/
-│   ├── transformed/
-│   └── encoded/
+│   ├── raw
+│   ├── transformed
+│   └── encoded
 ├── notebooks/
 │   ├── 1_extract_transform.ipynb
 │   ├── 2_exploratory_analysis.ipynb
