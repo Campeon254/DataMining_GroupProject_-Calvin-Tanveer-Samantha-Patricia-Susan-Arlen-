@@ -90,16 +90,15 @@ This project analyzes lung cancer patient data to predict survival rates and ide
 [Screenshot: Demographic visualizations]
 
 ### Medical Factor Analysis
-- Investigated comorbidity patterns
-- Analyzed treatment effectiveness by cancer stage
-- Studied survival rates across different patient groups
+- Investigated comorbidity patterns.
+- Analyzed treatment effectiveness by cancer stage- Studied survival rates across different patient groups.
 
 [Screenshot: Medical factor analysis]
 
 ### Time-based Analysis
-- Tracked diagnosis patterns over time
-- Analyzed treatment duration effects
-- Studied seasonal variations in diagnoses
+- Tracked diagnosis patterns over time.
+- Analyzed treatment duration effects.
+- Studied seasonal variations in diagnoses.
 
 [Screenshot: Temporal analysis]
 
