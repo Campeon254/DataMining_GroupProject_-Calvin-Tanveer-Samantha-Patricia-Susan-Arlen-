@@ -16,7 +16,7 @@ This project analyzes lung cancer patient data to predict survival rates and ide
 - Implemented two extraction methods:
   - Full extraction: Complete dataset load for initial analysis (20,000 records)
   - Incremental extraction: Filtered for records after 2020-01-01 (8,815 records)
-- Data fields included 17 features covering patient demographics, medical history, treatment details, and survival outcomes
+- Data fields included 17 features covering patient demographics, medical history, treatment details, and survival outcomes.
 
 [Screenshot: Initial data loading and shape]
 
@@ -37,10 +37,10 @@ This project analyzes lung cancer patient data to predict survival rates and ide
    - Converted diagnosis_date and end_treatment_date to datetime
    - Calculated treatment_duration in days: end_treatment_date - diagnosis_date
    - Created time-based features:
-     - diagnosis_year: Extract year from diagnosis date
-     - diagnosis_month: 1-12 month encoding
-     - diagnosis_quarter: Q1-Q4 categorization
-     - diagnosis_year_month: Combined year-month for time series
+     - diagnosis_year: Extract year from diagnosis date.
+     - diagnosis_month: 1-12 month encoding.
+     - diagnosis_quarter: Q1-Q4 categorization.
+     - diagnosis_year_month: Combined year-month for time series.
 
 2. **Clinical Feature Development**
    - Created comorbidity_count by summing:
@@ -65,22 +65,22 @@ This project analyzes lung cancer patient data to predict survival rates and ide
      - adults: 20-59
      - elderly: 60+
    - One-hot encoded categorical variables:
-     - gender: Male/Female
-     - country: 15 unique countries
-     - smoking_status: Never/Former/Current
-     - treatment_type: Surgery/Chemotherapy/Radiation/Combined
+     - gender: Male/Female.
+     - country: 15 unique countries.
+     - smoking_status: Never/Former/Current.
+     - treatment_type: Surgery/Chemotherapy/Radiation/Combined.
 
 [Screenshot: Feature engineering results]
 
 ## 2. Exploratory Data Analysis
 ### Demographic Analysis
 - Age and Gender Distribution:
-  - Median age: 58 years
-  - Gender split: 62% male, 38% female
-  - Highest incidence: 45-59 age group (42%)
+  - Median age: 58 years.
+  - Gender split: 62% male, 38% female.
+  - Highest incidence: 45-59 age group (42%).
 - Geographical Analysis:
-  - Top 3 countries: France (15%), Germany (13%), UK (12%)
-  - Regional variation in treatment approaches
+  - Top 3 countries: France (15%), Germany (13%), UK (12%).
+  - Regional variation in treatment approaches.
 - Smoking Status Impact:
   - Current smokers: 45%
   - Former smokers: 35%
