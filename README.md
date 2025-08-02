@@ -53,8 +53,6 @@ print(incremental_ext.dtypes)
 # describing the dataset
 incremental_ext.describe()
 ```
-
-
 ### Feature Engineering
 1. **Temporal Feature Creation**
    - Converted diagnosis_date and end_treatment_date to datetime.
@@ -87,6 +85,306 @@ incremental_ext.describe()
      - adolescents: 13-19
      - adults: 20-59
      - elderly: 60+
+
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>age</th>
+      <th>gender</th>
+      <th>country</th>
+      <th>diagnosis_date</th>
+      <th>cancer_stage</th>
+      <th>family_history</th>
+      <th>smoking_status</th>
+      <th>bmi</th>
+      <th>cholesterol_level</th>
+      <th>...</th>
+      <th>treatment_duration</th>
+      <th>comorbidities_count</th>
+      <th>bmi_category</th>
+      <th>cholesterol_category</th>
+      <th>age_group</th>
+      <th>comorbidity_count</th>
+      <th>diagnosis_year</th>
+      <th>diagnosis_month</th>
+      <th>diagnosis_quarter</th>
+      <th>diagnosis_year_month</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>278120</td>
+      <td>63.0</td>
+      <td>Female</td>
+      <td>Hungary</td>
+      <td>2024-04-01</td>
+      <td>Stage III</td>
+      <td>No</td>
+      <td>Passive Smoker</td>
+      <td>22.2</td>
+      <td>162</td>
+      <td>...</td>
+      <td>618</td>
+      <td>2</td>
+      <td>normal</td>
+      <td>Desirable</td>
+      <td>60-74</td>
+      <td>2</td>
+      <td>2024</td>
+      <td>4</td>
+      <td>2</td>
+      <td>2024-04</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100970</td>
+      <td>54.0</td>
+      <td>Female</td>
+      <td>Croatia</td>
+      <td>2021-08-14</td>
+      <td>Stage IV</td>
+      <td>Yes</td>
+      <td>Never Smoked</td>
+      <td>36.2</td>
+      <td>258</td>
+      <td>...</td>
+      <td>486</td>
+      <td>3</td>
+      <td>obese</td>
+      <td>High</td>
+      <td>45-59</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>8</td>
+      <td>3</td>
+      <td>2021-08</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>684392</td>
+      <td>60.0</td>
+      <td>Male</td>
+      <td>Latvia</td>
+      <td>2023-01-22</td>
+      <td>Stage III</td>
+      <td>No</td>
+      <td>Passive Smoker</td>
+      <td>18.7</td>
+      <td>195</td>
+      <td>...</td>
+      <td>418</td>
+      <td>2</td>
+      <td>normal</td>
+      <td>Desirable</td>
+      <td>60-74</td>
+      <td>2</td>
+      <td>2023</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2023-01</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>746694</td>
+      <td>55.0</td>
+      <td>Female</td>
+      <td>Hungary</td>
+      <td>2020-08-04</td>
+      <td>Stage III</td>
+      <td>No</td>
+      <td>Never Smoked</td>
+      <td>28.8</td>
+      <td>161</td>
+      <td>...</td>
+      <td>280</td>
+      <td>2</td>
+      <td>overweight</td>
+      <td>Desirable</td>
+      <td>45-59</td>
+      <td>2</td>
+      <td>2020</td>
+      <td>8</td>
+      <td>3</td>
+      <td>2020-08</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>566016</td>
+      <td>46.0</td>
+      <td>Male</td>
+      <td>Spain</td>
+      <td>2024-01-03</td>
+      <td>Stage I</td>
+      <td>Yes</td>
+      <td>Current Smoker</td>
+      <td>37.3</td>
+      <td>257</td>
+      <td>...</td>
+      <td>481</td>
+      <td>1</td>
+      <td>obese</td>
+      <td>High</td>
+      <td>45-59</td>
+      <td>1</td>
+      <td>2024</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2024-01</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>8809</th>
+      <td>558421</td>
+      <td>55.0</td>
+      <td>Male</td>
+      <td>Ireland</td>
+      <td>2020-10-05</td>
+      <td>Stage II</td>
+      <td>No</td>
+      <td>Current Smoker</td>
+      <td>29.6</td>
+      <td>170</td>
+      <td>...</td>
+      <td>553</td>
+      <td>1</td>
+      <td>overweight</td>
+      <td>Desirable</td>
+      <td>45-59</td>
+      <td>1</td>
+      <td>2020</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2020-10</td>
+    </tr>
+    <tr>
+      <th>8810</th>
+      <td>542193</td>
+      <td>50.0</td>
+      <td>Male</td>
+      <td>Portugal</td>
+      <td>2024-03-02</td>
+      <td>Stage II</td>
+      <td>Yes</td>
+      <td>Never Smoked</td>
+      <td>39.1</td>
+      <td>283</td>
+      <td>...</td>
+      <td>563</td>
+      <td>0</td>
+      <td>obese</td>
+      <td>High</td>
+      <td>45-59</td>
+      <td>0</td>
+      <td>2024</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2024-03</td>
+    </tr>
+    <tr>
+      <th>8811</th>
+      <td>495998</td>
+      <td>40.0</td>
+      <td>Female</td>
+      <td>Croatia</td>
+      <td>2020-07-26</td>
+      <td>Stage IV</td>
+      <td>No</td>
+      <td>Former Smoker</td>
+      <td>41.5</td>
+      <td>243</td>
+      <td>...</td>
+      <td>235</td>
+      <td>1</td>
+      <td>obese</td>
+      <td>High</td>
+      <td>30-44</td>
+      <td>1</td>
+      <td>2020</td>
+      <td>7</td>
+      <td>3</td>
+      <td>2020-07</td>
+    </tr>
+    <tr>
+      <th>8812</th>
+      <td>151922</td>
+      <td>75.0</td>
+      <td>Male</td>
+      <td>Cyprus</td>
+      <td>2022-03-01</td>
+      <td>Stage IV</td>
+      <td>No</td>
+      <td>Former Smoker</td>
+      <td>24.2</td>
+      <td>189</td>
+      <td>...</td>
+      <td>316</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>Desirable</td>
+      <td>75+</td>
+      <td>0</td>
+      <td>2022</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2022-03</td>
+    </tr>
+    <tr>
+      <th>8813</th>
+      <td>170197</td>
+      <td>65.0</td>
+      <td>Female</td>
+      <td>Denmark</td>
+      <td>2020-11-25</td>
+      <td>Stage II</td>
+      <td>Yes</td>
+      <td>Passive Smoker</td>
+      <td>35.9</td>
+      <td>292</td>
+      <td>...</td>
+      <td>430</td>
+      <td>0</td>
+      <td>obese</td>
+      <td>High</td>
+      <td>60-74</td>
+      <td>0</td>
+      <td>2020</td>
+      <td>11</td>
+      <td>4</td>
+      <td>2020-11</td>
+    </tr>
+  </tbody>
+</table>
+<p>8814 rows × 27 columns</p>
+</div>
+
    - One-hot encoded categorical variables:
      - gender: Male/Female.
      - country: 15 unique countries.
@@ -94,6 +392,7 @@ incremental_ext.describe()
      - treatment_type: Surgery/Chemotherapy/Radiation/Combined.
 
 <div>
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
