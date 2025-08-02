@@ -10,8 +10,7 @@ This project analyzes lung cancer patient data to predict survival rates and ide
 3. [Data Mining and Modeling](#3-data-mining-and-modeling)
 4. [Interactive Dashboard](#4-interactive-dashboard)
 
-## 1. Data Extraction and Transformation
-### Initial Data Loading
+## 1. Data Extraction and Transformation### Initial Data Loading
 - Loaded raw dataset containing 20,000 patient records from multiple healthcare facilities
 - Implemented two extraction methods:
   - Full extraction: Complete dataset load for initial analysis (20,000 records)
@@ -29,6 +28,7 @@ This project analyzes lung cancer patient data to predict survival rates and ide
     - Verified binary indicators (0/1) for medical conditions.
     - Converted categorical variables to category dtype.
 - Generated data quality report showing 100% completeness.
+
 
 [Screenshot: Data quality checks]
 
