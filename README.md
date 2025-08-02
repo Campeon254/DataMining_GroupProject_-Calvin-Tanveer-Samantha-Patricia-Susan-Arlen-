@@ -11,10 +11,18 @@ This project analyzes lung cancer patient data to predict survival rates and ide
 4. [Interactive Dashboard](#4-interactive-dashboard)
 
 ## 1. Data Extraction and Transformation### Initial Data Loading
-- Loaded raw dataset containing 20,000 patient records from multiple healthcare facilities
+- Loaded raw dataset containing 20,000 patient records. The data was obtained from Kaggle.
+```python
+import kagglehub
+
+# Download latest version
+path = kagglehub.dataset_download("khwaishsaxena/lung-cancer-dataset")
+
+print("Path to dataset files:", path)
+```
 - Implemented two extraction methods:
-  - Full extraction: Complete dataset load for initial analysis (20,000 records): Loaded the entire dataset from a CSV file.
-  - Incremental extraction: Filtered for records after 2020-01-01 (8,815 records): Loaded only updated data from the source.
+  - `Full extraction`: Complete dataset load for initial analysis (20,000 records): Loaded the entire dataset from a CSV file.
+  - `Incremental extraction`: Filtered for records after 2020-01-01 (8,815 records): Loaded only updated data from the source.
 - Data fields included 17 features covering patient demographics, medical history, treatment details, and survival outcomes.
 
 [Screenshot: Initial data loading and shape]
