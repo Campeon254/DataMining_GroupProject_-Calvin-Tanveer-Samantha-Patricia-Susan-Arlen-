@@ -37,8 +37,23 @@ print("Path to dataset files:", path)
     - Converted categorical variables to category dtype.
 - Generated data quality report showing 100% completeness.
 
+``` python
+# checking for null values
+missing = incremental_ext.isnull().sum()
+print(f"Total number of missing values:\n{missing}")
 
-[Screenshot: Data quality checks]
+# checking for duplicate values
+dups = incremental_ext.duplicated().sum()
+print(f"Total number of duplicate values: {dups}")
+
+# checking the datatypes 
+print("The datatypes of the columns:\n")
+print(incremental_ext.dtypes)
+
+# describing the dataset
+incremental_ext.describe()
+```
+
 
 ### Feature Engineering
 1. **Temporal Feature Creation**
@@ -78,7 +93,316 @@ print("Path to dataset files:", path)
      - smoking_status: Never/Former/Current.
      - treatment_type: Surgery/Chemotherapy/Radiation/Combined.
 
-[Screenshot: Feature engineering results]
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>age</th>
+      <th>diagnosis_date</th>
+      <th>cancer_stage</th>
+      <th>bmi</th>
+      <th>cholesterol_level</th>
+      <th>hypertension</th>
+      <th>asthma</th>
+      <th>cirrhosis</th>
+      <th>other_cancer</th>
+      <th>...</th>
+      <th>country_Slovenia</th>
+      <th>country_Spain</th>
+      <th>country_Sweden</th>
+      <th>smoking_status_Former Smoker</th>
+      <th>smoking_status_Never Smoked</th>
+      <th>smoking_status_Passive Smoker</th>
+      <th>treatment_type_Combined</th>
+      <th>treatment_type_Radiation</th>
+      <th>treatment_type_Surgery</th>
+      <th>family_history_Yes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>278120</td>
+      <td>63.0</td>
+      <td>2024-04-01</td>
+      <td>Stage III</td>
+      <td>22.2</td>
+      <td>162</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100970</td>
+      <td>54.0</td>
+      <td>2021-08-14</td>
+      <td>Stage IV</td>
+      <td>36.2</td>
+      <td>258</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>684392</td>
+      <td>60.0</td>
+      <td>2023-01-22</td>
+      <td>Stage III</td>
+      <td>18.7</td>
+      <td>195</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>746694</td>
+      <td>55.0</td>
+      <td>2020-08-04</td>
+      <td>Stage III</td>
+      <td>28.8</td>
+      <td>161</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>566016</td>
+      <td>46.0</td>
+      <td>2024-01-03</td>
+      <td>Stage I</td>
+      <td>37.3</td>
+      <td>257</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>8809</th>
+      <td>558421</td>
+      <td>55.0</td>
+      <td>2020-10-05</td>
+      <td>Stage II</td>
+      <td>29.6</td>
+      <td>170</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>8810</th>
+      <td>542193</td>
+      <td>50.0</td>
+      <td>2024-03-02</td>
+      <td>Stage II</td>
+      <td>39.1</td>
+      <td>283</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>8811</th>
+      <td>495998</td>
+      <td>40.0</td>
+      <td>2020-07-26</td>
+      <td>Stage IV</td>
+      <td>41.5</td>
+      <td>243</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>8812</th>
+      <td>151922</td>
+      <td>75.0</td>
+      <td>2022-03-01</td>
+      <td>Stage IV</td>
+      <td>24.2</td>
+      <td>189</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>8813</th>
+      <td>170197</td>
+      <td>65.0</td>
+      <td>2020-11-25</td>
+      <td>Stage II</td>
+      <td>35.9</td>
+      <td>292</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>8814 rows × 56 columns</p>
+</div>
 
 ## 2. Exploratory Data Analysis
 ### Demographic Analysis
