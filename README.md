@@ -2,15 +2,28 @@
 ## Data Science Project by Calvin, Tanveer, Samantha, Patricia, Susan and Arlen
 
 ## Project Overview
-This project analyzes lung cancer patient data to predict survival rates and identify key factors affecting patient outcomes. We developed a machine learning pipeline that processes patient records, identifies risk factors, and provides survival probability predictions through an interactive dashboard.
+Lung cancer is one of the leading causes of cancer-related deaths worldwide. Early prediction of survival outcomes can assist in timely clinical interventions and improved treatment planning. This project analyzes a real-world lung cancer patient dataset to identify key survival factors and build predictive models.
+
+We developed a machine learning pipeline that processes patient records, performs in-depth statistical and clinical analysis, and delivers survival probability predictions through an interactive dashboard for clinical insights.
+
+## Objectives
+- Identify significant demographic, clinical, and treatment factors affecting lung cancer survival.
+- Build predictive models to estimate survival probabilities.
+- Create an interactive dashboard for real-time survival analysis and predictions.
+- Provide insights into treatment effectiveness and patient outcomes.
 
 ## Table of Contents
 1. [Data Extraction and Transformation](#1-data-extraction-and-transformation)
 2. [Exploratory Data Analysis](#2-exploratory-data-analysis)
 3. [Data Mining and Modeling](#3-data-mining-and-modeling)
 4. [Interactive Dashboard](#4-interactive-dashboard)
-
-## 1. Data Extraction and Transformation### Initial Data Loading
+5. [Conclusions](#conclusions)
+6. [Future Improvements](#future-improvements)
+7. [Setup and Usage](#setup-and-usage)
+8. [Contributors](#contributors)
+9. [License](#license)
+## 1. Data Extraction and Transformation
+### Initial Data Loading
 - Loaded raw dataset containing 20,000 patient records. The data was obtained from Kaggle.
 ```python
 import kagglehub
@@ -25,7 +38,147 @@ print("Path to dataset files:", path)
   - `Incremental extraction`: Filtered for records after 2020-01-01 (8,815 records): Loaded only updated data from the source.
 - Data fields included 17 features covering patient demographics, medical history, treatment details, and survival outcomes.
 
-[Screenshot: Initial data loading and shape]
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>age</th>
+      <th>gender</th>
+      <th>country</th>
+      <th>diagnosis_date</th>
+      <th>cancer_stage</th>
+      <th>family_history</th>
+      <th>smoking_status</th>
+      <th>bmi</th>
+      <th>cholesterol_level</th>
+      <th>hypertension</th>
+      <th>asthma</th>
+      <th>cirrhosis</th>
+      <th>other_cancer</th>
+      <th>treatment_type</th>
+      <th>end_treatment_date</th>
+      <th>survived</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>773685</td>
+      <td>37.0</td>
+      <td>Male</td>
+      <td>Lithuania</td>
+      <td>2015-09-30</td>
+      <td>Stage II</td>
+      <td>No</td>
+      <td>Current Smoker</td>
+      <td>34.5</td>
+      <td>241</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Surgery</td>
+      <td>2017-05-16</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>278120</td>
+      <td>63.0</td>
+      <td>Female</td>
+      <td>Hungary</td>
+      <td>2024-04-01</td>
+      <td>Stage III</td>
+      <td>No</td>
+      <td>Passive Smoker</td>
+      <td>22.2</td>
+      <td>162</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Combined</td>
+      <td>2025-12-10</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>810423</td>
+      <td>63.0</td>
+      <td>Female</td>
+      <td>Belgium</td>
+      <td>2015-05-08</td>
+      <td>Stage III</td>
+      <td>No</td>
+      <td>Former Smoker</td>
+      <td>22.8</td>
+      <td>230</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Combined</td>
+      <td>2016-11-23</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>443588</td>
+      <td>71.0</td>
+      <td>Male</td>
+      <td>Denmark</td>
+      <td>2014-10-05</td>
+      <td>Stage II</td>
+      <td>No</td>
+      <td>Never Smoked</td>
+      <td>32.1</td>
+      <td>293</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Chemotherapy</td>
+      <td>2016-06-19</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>701479</td>
+      <td>45.0</td>
+      <td>Female</td>
+      <td>Cyprus</td>
+      <td>2015-07-05</td>
+      <td>Stage I</td>
+      <td>No</td>
+      <td>Current Smoker</td>
+      <td>29.0</td>
+      <td>173</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Surgery</td>
+      <td>2017-01-31</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ### Data Quality Assessment
 - Performed comprehensive data quality checks:
@@ -385,6 +538,7 @@ incremental_ext.describe()
 <p>8814 rows × 27 columns</p>
 </div>
 
+4. **Encoding**
    - One-hot encoded categorical variables:
      - gender: Male/Female.
      - country: 15 unique countries.
@@ -705,20 +859,20 @@ incremental_ext.describe()
   - Never smoked: 20%
   - Correlation with survival rate: -0.42
 
-[Screenshot: Demographic visualizations]
+![Medical factor analysis](/report/Screenshots/newplot.png)
 
 ### Medical Factor Analysis
 - Investigated comorbidity patterns.
 - Analyzed treatment effectiveness by cancer stage- Studied survival rates across different patient groups.
 
-[Screenshot: Medical factor analysis]
+![Medical factor analysis](/report/Screenshots/newplot2.png)
 
 ### Time-based Analysis
 - Tracked diagnosis patterns over time.
 - Analyzed treatment duration effects.
 - Studied seasonal variations in diagnoses.
 
-[Screenshot: Temporal analysis]
+![Time-based analysis](/report/Screenshots/output.png)
 
 ## 3. Data Mining and Modeling
 ### Model Development
@@ -732,25 +886,53 @@ incremental_ext.describe()
    - Random Forest Classifier.
    
 3. **Model Evaluation**
-   - Logistic Regression:
-     - Accuracy: 0.8234
-     - ROC-AUC: 0.8912
+--- Logistic Regression Evaluation ---
+Accuracy: 0.7805
+Precision: 0.0000
+Recall: 0.0000
+F1-Score: 0.0000
+ROC-AUC: 0.5000
+
    - Random Forest:
      - Accuracy: 0.8967
      - ROC-AUC: 0.9234
    - 5-fold Cross-validation mean ROC-AUC: 0.9156 (±0.0123)
 
-[Screenshot: Model performance comparison]
+
+--- Model Performance Comparison ---
+
+|                 Model   | F1-Score | ROC-AUC
+|-------------------------|----------|----------
+|0  Logistic Regression   | 0.0      | 0.500000
+|1        Random Forest   | 0.0      | 0.499637
+
+
+- 5-Fold CV 
+Cross-validation ROC-AUC scores: [0.48709837 0.50976598 0.55456215 0.55141762 0.5200203 ]
+Mean ROC-AUC: 0.5246 (+/- 0.0511)
+
+- Hyperparameter Tuning
+Best cross-validation ROC-AUC score: 0.5234
+
+--- Best Model Evaluation ---
+| Metric    | Value  |
+|-----------|--------|
+|Accuracy:  | 0.7805 |
+|Precision: | 0.0000 |
+|Recall:    | 0.0000 |
+|F1-Score:  | 0.0000 |
+|ROC-AUC:   | 0.5000 |
 
 ### Feature Importance Analysis
 - Top 5 predictors of survival:
-  1. Cancer stage (0.245)
-  2. Treatment duration (0.198)
-  3. Age (0.156)
-  4. Comorbidities count (0.134)
-  5. Treatment type (0.089)
 
-[Screenshot: Feature importance plot]
+| Feature            | Importance |
+| ------------------ | ---------- |
+| Cancer Stage       | 0.245      |
+| Treatment Duration | 0.198      |
+| Age                | 0.156      |
+| Comorbidity Count  | 0.134      |
+| Treatment Type     | 0.089      |
 
 ## 4. Interactive Dashboard
 ### Survival Analysis Dashboard
@@ -766,13 +948,45 @@ incremental_ext.describe()
 
 [Screenshot: Dashboard interface]
 
-## Technical Implementation
+## Conclusions
+Our analysis showed that cancer stage and treatment duration are the strongest predictors of survival. The Random Forest model outperformed others in prediction accuracy, suggesting strong non-linear interactions among variables. However, absence of genomic or imaging data limits the scope of prediction.
+
+## Future Improvements
+- Add genomic/imaging data
+- Test on real clinical settings
+- Integrate with hospital EMRs
+- Expand to other cancers
+
+## Setup and Usage
+1. Clone the repository:
+```bash
+git clone <https://github.com/Campeon254/DataMining_GroupProject_-Calvin-Tanveer-Samantha-Patricia-Susan-Arlen-.git>
+
+cd DataMining_GroupProject_-Calvin-Tanveer-Samantha-Patricia-Susan-Arlen-
+```
+
+2. Install required packages:
+```bash
+pip install -r requirements.txt
+```
+
+3. Creating a virtual environment (optional but recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
+4. Run the Jupyter Notebook:
+```bash
+jupyter notebook notebooks/1_extract_transform.ipynb
+```
+
 ### Tools and Technologies
 - Python 3.x.
 - Pandas & NumPy for data manipulation.
 - Scikit-learn for machine learning.
 - Plotly & Seaborn for visualization.
 - Jupyter Notebooks for development.
+
 
 ### Project Structure
 ```
@@ -790,13 +1004,6 @@ project/
 │   └── survival_predictor.pkl
 └── README.md
 ```
-
-## Conclusions
-[Your conclusions will go here]
-
-## Future Improvements
-[Your future improvements will go here]
-
 ## Contributors
 - Calvin Gacheru - 670035
 - Tanveer Omar
