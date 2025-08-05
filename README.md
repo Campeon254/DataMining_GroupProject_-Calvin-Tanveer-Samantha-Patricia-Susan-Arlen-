@@ -22,6 +22,34 @@ We developed a machine learning pipeline that processes patient records, perform
 7. [Setup and Usage](#setup-and-usage)
 8. [Contributors](#contributors)
 9. [License](#license)
+
+## How to run the project
+1. Clone the repository 
+   git clone https://github.com/Campeon254/DataMining_GroupProject_-Calvin-Tanveer-Samantha-Patricia-Susan-Arlen-.git
+2. Import the necessary libraries 
+   import pandas as pd
+   import numpy as np
+   import matplotlib.pyplot as plt
+   import seaborn as sns
+   from datetime import datetime, timedelta
+   import warnings
+warnings.filterwarnings("ignore")
+from scipy import stats
+import plotly.express as px
+import plotly.graph_objects as go 
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import joblib
+from lifelines import KaplanMeierFitter
+from lifelines import CoxPHFitter
+import matplotlib.pyplot as plt
+3. Run the jupyter notebooks in order 
+   1_extract_transform.ipynb – loads and cleans the data
+   2_exploratory_analysis.ipynb – performs visual and statistical EDA
+   3_data_mining.ipynb – applies machine learning or mining algorithms
+   4_insights_dashboard.ipynb – displays results and insights
+   
 ## 1. Data Extraction and Transformation
 ### Initial Data Loading
 - Loaded raw dataset containing 20,000 patient records. The data was obtained from Kaggle.
