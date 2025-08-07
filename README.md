@@ -931,6 +931,10 @@ Best cross-validation ROC-AUC score: 0.5234
 |F1-Score:  | 0.0000 |
 |ROC-AUC:   | 0.5000 |
 
+- Calibration curve:
+  - Strengths: Accurate predictions at extremes (0.1 and 0.4+).
+  - Weaknesses: Slight underestimation in mid-range probabilities (0.2–0.3).
+
 ### Feature Importance Analysis
 - Top 5 predictors of survival:
 
