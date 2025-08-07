@@ -888,6 +888,7 @@ incremental_ext.describe()
    - Split data into training (80%) and testing (20%) sets.
    - Standardized numerical features.
    - Encoded categorical variables.
+   - Very important to note that we had to drop a large chunk of the data due to not having the computational power to run the models on the entire dataset. We were limited by computational power and hope to run the models on the entire dataset in the future.
 
 2. **Models Implemented**
    - Logistic Regression.
