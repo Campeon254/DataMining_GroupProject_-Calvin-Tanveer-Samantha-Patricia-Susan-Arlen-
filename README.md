@@ -857,8 +857,8 @@ incremental_ext.describe()
 - Age vs illness effect/impact:
   - Age was a key factor.
   - Patients aged 19–45 showed the highest survival rates, especially the 31–45 group.
-  - 0–18 age group had the lowest survival rate, suggesting potential challenges in early-age diagnosis or      treatment.
-  - Survival outcomes remained fairly stable for the 46–60 and 60+ groups, hovering around the same proportion.
+  - 0–18 age group had the lowest survival rate.
+  - Survival outcomes remained fairly stable for the 46–60 and 60+ groups.
 - Smoking Status Impact:
   - Current smokers: 45%
   - Former smokers: 35%
