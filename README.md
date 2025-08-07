@@ -1046,7 +1046,7 @@ project/
 - Tanveer Omar
 - Samantha Masaki
 - Patricia Kiarie
-- Susan 
+- Susan Otieno 
 - Arlen Ngahu - 667855
 
 ## License
