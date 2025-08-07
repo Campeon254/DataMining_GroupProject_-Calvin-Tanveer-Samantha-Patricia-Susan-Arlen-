@@ -233,7 +233,6 @@ incremental_ext.describe()
      - Borderline high: 200-239
      - High: ≥ 240
 
-
 3. **Demographic Feature Processing**
    - Created age groups:
      - children: 0-12
@@ -855,6 +854,11 @@ incremental_ext.describe()
 - Geographical Analysis:
   - Top 3 countries: France (15%), Germany (13%), UK (12%).
   - Regional variation in treatment approaches.
+- Age vs illness effect/impact:
+  - Age was a key factor.
+  - Patients aged 19–45 showed the highest survival rates, especially the 31–45 group.
+  - 0–18 age group had the lowest survival rate, suggesting potential challenges in early-age diagnosis or      treatment.
+  - Survival outcomes remained fairly stable for the 46–60 and 60+ groups, hovering around the same proportion.
 - Smoking Status Impact:
   - Current smokers: 45%
   - Former smokers: 35%
