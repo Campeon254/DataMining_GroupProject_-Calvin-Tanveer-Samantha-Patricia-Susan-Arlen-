@@ -223,11 +223,7 @@ incremental_ext.describe()
      - asthma (0/1)
      - cirrhosis (0/1)
      - other_cancer (0/1)
-   - Categorized BMI into clinical groups:
-     - underweight: < 18.5
-     - normal: 18.5-24.9
-     - overweight: 25-29.9
-     - obese: ≥ 30
+
    - Binned cholesterol levels:
      - Desirable: < 200
      - Borderline high: 200-239
