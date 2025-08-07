@@ -866,7 +866,7 @@ incremental_ext.describe()
   - Correlation with survival rate: -0.42
 - Survival factor:
   - Between gender: Survival rates were almost equal for both males and females.
-  - Between countries: Overall survival rates were fairly consistent across most countries, Ireland showed a noticeably higher survival rate, suggesting potentially better healthcare interventions or early diagnosis, Countries like Netherlands and Poland had slightly lower survival rates compared to others.
+  - Between countries: Overall survival rates were fairly consistent across most countries.
 
 ![Medical factor analysis](/report/Screenshots/newplot.png)
 
