@@ -1,1 +1,30 @@
-make the readme a story
+# Core libraries
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Data visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# Machine learning
+scikit-learn>=1.0.0
+
+# Dashboard (choose one depending on what you used)
+streamlit>=1.10.0
+# dash>=2.0.0  # Uncomment if using Dash instead
+
+# Utility
+kaggle>=1.5.12
+kagglehub>=0.2.0
+python-dateutil>=2.8.0
+
+# Notebook interface
+jupyterlab>=3.0.0
+ipykernel>=6.0.0
+
+# Optional (for warnings, formatting, etc.)
+tqdm>=4.64.0
+
+# For testing
+pytest>=6.2.0
