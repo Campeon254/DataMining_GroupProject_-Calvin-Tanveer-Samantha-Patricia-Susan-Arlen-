@@ -233,6 +233,7 @@ incremental_ext.describe()
      - Borderline high: 200-239
      - High: ≥ 240
 
+
 3. **Demographic Feature Processing**
    - Created age groups:
      - children: 0-12
