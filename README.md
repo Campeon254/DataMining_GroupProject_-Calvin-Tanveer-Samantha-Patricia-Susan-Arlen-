@@ -950,6 +950,7 @@ Best cross-validation ROC-AUC score: 0.5234
 ### Survival Analysis Dashboard
 - Created interactive visualizations for:
   - Survival rates by demographics.
+  - Survival rates by age group and gender
   - Treatment effectiveness.
   - Risk factor analysis.
   
