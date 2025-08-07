@@ -872,7 +872,8 @@ incremental_ext.describe()
 
 ### Medical Factor Analysis
 - Investigated comorbidity patterns.
-- Analyzed treatment effectiveness by cancer stage- Studied survival rates across different patient groups.
+- Analyzed treatment effectiveness by cancer stage.
+- Studied survival rates across different patient groups.
 
 ![Medical factor analysis](/report/Screenshots/newplot2.png)
 
