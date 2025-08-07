@@ -1043,12 +1043,12 @@ project/
 └── README.md
 ```
 ## Contributors
-- Calvin Gacheru - 670035
-- Tanveer Omar
-- Samantha Masaki
-- Patricia Kiarie
-- Susan Otieno 
-- Arlen Ngahu - 667855
+- Calvin - 035
+- Tanveer - 752
+- Samantha - 455
+- Patricia - 781
+- Susan - 501
+- Arlen - 855
 
 ## License
 This repository is Licensed under the MIT License. See [LICENSE](LICENSE) for details.
