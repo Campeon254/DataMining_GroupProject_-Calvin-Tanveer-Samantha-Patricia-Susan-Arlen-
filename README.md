@@ -864,9 +864,7 @@ incremental_ext.describe()
   - Former smokers: 35%
   - Never smoked: 20%
   - Correlation with survival rate: -0.42
-- Survival factor:
-  - Between gender: Survival rates were almost equal for both males and females.
-  - Between countries: Overall survival rates were fairly consistent across most countries.
+
 
 ![Medical factor analysis](/report/Screenshots/newplot.png)
 
